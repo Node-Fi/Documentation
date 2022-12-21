@@ -1,0 +1,5 @@
+# Data Retrieval Hooks
+
+Under the hood, the React Native SDK leverages [`react-query`](https://tanstack.com/query/v4/docs/overview) for data fetching and caching.
+
+In order to pass as much power to the end developer, the React Native SDK includes optionally declaring query options for each hook that uses `react-query.` Additionally, every hook that uses `react-query` returns an object that contains the result as well as `fetchDetails,` which passes along useful information such as when the query is fetching, when it has reached an error, and much more.&#x20;
