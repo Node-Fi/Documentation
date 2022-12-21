@@ -1,6 +1,6 @@
 {
-  "label": "Defi Data",
-  "position": 3,
+  "label": "Wallets",
+  "position": 1,
   "link": {
     "type": "generated-index",
     "description": "The most important data on the most important protocols."

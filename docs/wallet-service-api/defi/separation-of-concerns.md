@@ -1,3 +1,7 @@
+---
+sidebar_position: -1
+---
+
 # Data vs Execution
 
 The Node Finance stack is built with the idea of separation of concerns in mind. Many farms, pools, and lending markets have similar methods for data retrieval, but vastly different ways to deposit. The math to deposit in one type of pool could never work for another type of pool.
