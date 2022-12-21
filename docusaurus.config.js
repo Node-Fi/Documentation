@@ -10,7 +10,7 @@ const config = {
   tagline: "Your one-stop-shop for Web3 Infrastructure",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/node-logo.png",
 
@@ -26,7 +26,6 @@ const config = {
     defaultLocale: "en",
     locales: ["en"],
   },
-
   presets: [
     [
       "@docusaurus/preset-classic",
@@ -131,7 +130,7 @@ const config = {
             items: [
               {
                 label: "Tutorial",
-                to: "/docs/intro",
+                to: "/sdk/intro",
               },
             ],
           },
