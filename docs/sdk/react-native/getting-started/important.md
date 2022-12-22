@@ -1,4 +1,8 @@
-# Getting Started
+---
+sidebar_position: 0
+---
+
+# Before you Begin
 
 For developers wanting to just get up and running with Node Finance infrastructure, the React Native SDK is an excellent way to do so. In order to create the easiest developer experience, the React Native SDK is fairly opinionated in terms of libraries for data retrieval and state management. In cases where applicable, as much control is attempted to be passed on to the end developer, namely in data retrieval and persistence.
 
