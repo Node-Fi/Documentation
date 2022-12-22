@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+sidebar_class_name: green
+---
+
 # Data Retrieval Hooks
 
 Under the hood, the React Native SDK leverages [`react-query`](https://tanstack.com/query/v4/docs/overview) for data fetching and caching.
