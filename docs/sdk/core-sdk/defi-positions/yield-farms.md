@@ -22,6 +22,8 @@ The YieldFarm class represents a yield farming position, where users can earn re
 | \_walletDeposited | TokenAmount             | The amount of the user's deposit in the farm.      |
 | \_name            | string                  | The name of the farm.                              |
 
+---
+
 ## Claiming Tokens
 
 Yield farms usually pay out interest in the form of reward tokens. Claiming reward tokens can look different depending on the underling contract. Luckily, the `YieldFarm` class standardizes querying for and claiming pending reward tokens.
@@ -57,6 +59,8 @@ The actual shape looks like:
     valueInLocalCurrency: number;
 }
 ```
+
+---
 
 ## Fetch Yield Farms
 
