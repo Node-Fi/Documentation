@@ -3,7 +3,7 @@ description: Wallet data can only be served if a wallet is registered within Nod
 sidebar_position: 0.5
 ---
 
-# Register a Wallet
+# Wallet Registration
 
 Regardless of whether a wallet is a local signer, external signer, or MPC wallet, historical data for a wallet can only be served if it is registered within Node's system. There are two different models are wallet registration available to tenants:
 
