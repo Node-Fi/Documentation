@@ -7,7 +7,7 @@ description: Node's identity sdk is powered by its `Identity Service,` which in 
 
 :::tip Summary
 
-Node's identity sdk is powered by its `Identity Service,` which in turn relies on the Celo blockchain's identity federated identity mapping system. Node is the default trusted attestor, and developers can opt-in to trust other attestors.
+Node's identity sdk is powered by its `Identity Service,` which in turn relies on the Celo blockchain's Federated Attestations (ASv2) service. Node is the default trusted attestor, and developers can opt-in to trust other attestors.
 
 :::
 
