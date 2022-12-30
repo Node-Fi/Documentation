@@ -1,0 +1,8 @@
+{
+  "label": "Modules",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Smaller SDKs that can stand on their own, or be used in conjunction with the main SDKs."
+  }
+}
