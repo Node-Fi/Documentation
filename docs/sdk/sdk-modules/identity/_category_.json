@@ -1,0 +1,8 @@
+{
+  "label": "Identity",
+  "position": 0,
+  "link": {
+    "type": "generated-index",
+    "description": "Map offchain identity to onchain identity in a privacy-preserving way"
+  }
+}
