@@ -1,5 +1,6 @@
 ---
 description: Wallets are the key to crypto
+sidebar_position: 0
 ---
 
 # Create a Wallet
@@ -9,7 +10,7 @@ Creating a wallet can be done with one single function! The SDK currently suppor
 Create wallet takes an argument of type `WalletCreationOpts`, allowing to create a wallet from a mnemonic, set the default gas currency on wallet creation, or create declare the language for the mnemonic to be created in. Note that alternate gas currencies are only supported on Celo and Alfajores.
 
 ```typescript
-import { useCreateWallet } from '@node-fi/react-native-wrapper';
+import { useCreateWallet } from "@node-fi/react-native-wrapper";
 
 // Creating a wallet from scratch:
 const createWallet = useCreateWallet();
@@ -20,7 +21,7 @@ createWallet().then((wallet) => {
 
 // Importing a wallet using a seed phrase
 const createWallet = useCreateWallet();
-const mnemonic = 'test test test ... test';
+const mnemonic = "test test test ... test";
 
 createWallet({ mnemonic }).then((wallet) => {
   // Do something!
@@ -28,7 +29,7 @@ createWallet({ mnemonic }).then((wallet) => {
 
 // Setting default currency on wallet creation
 const createWallet = useCreateWallet();
-const defaultGasCurrency = addressOf('CUSD');
+const defaultGasCurrency = addressOf("CUSD");
 
 createWallet({ defaultGasCurrency }).then((wallet) => {
   // Do something!
@@ -55,14 +56,14 @@ interface WalletCreationOpts {
 }
 
 type MnemonicLanguageOption =
-  | 'chinese_simplified'
-  | 'chinese_traditional'
-  | 'czech'
-  | 'english'
-  | 'french'
-  | 'italian'
-  | 'japanese'
-  | 'korean'
-  | 'portuguese'
-  | 'spanish';
+  | "chinese_simplified"
+  | "chinese_traditional"
+  | "czech"
+  | "english"
+  | "french"
+  | "italian"
+  | "japanese"
+  | "korean"
+  | "portuguese"
+  | "spanish";
 ```

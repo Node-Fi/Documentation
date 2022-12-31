@@ -76,12 +76,14 @@ const config = {
         sidebarPath: require.resolve("./sidebars.js"),
       },
     ],
+    "tailwind-loader",
   ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
+        hideOnScroll: true,
         title: "Node Finance",
         logo: {
           alt: "My Site Logo",
