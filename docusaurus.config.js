@@ -76,6 +76,15 @@ const config = {
         sidebarPath: require.resolve("./sidebars.js"),
       },
     ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "auth",
+        path: "docs/auth",
+        routeBasePath: "docs/auth",
+        sidebarPath: require.resolve("./sidebars.js"),
+      },
+    ],
     "tailwind-loader",
   ],
 
@@ -116,6 +125,13 @@ const config = {
             position: "left",
             label: "Analytics API",
             docsPluginId: "data-and-analytics",
+          },
+          {
+            type: "doc",
+            docId: "auth-architecture",
+            position: "left",
+            label: "Authentification",
+            docsPluginId: "auth",
           },
           {
             href: "https://github.com/Node-Fi/",
