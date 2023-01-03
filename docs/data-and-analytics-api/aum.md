@@ -5,5 +5,11 @@
 ##### Programmatic
 
 * [AUM](aum/get-aum-by-fields.md)
-* [historical](aum/historical-aum.md)
-* [holdings](aum/holdings-aum.md)
+* [Historical](aum/historical-aum.md)
+* [Holdings](aum/holdings-aum.md)
+
+
+##### Console
+
+* [Overview](aum/aum-console.md#overview)
+* [FeatureUse](aum/aum-console.md#featureuse)
