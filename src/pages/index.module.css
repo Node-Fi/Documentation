@@ -30,3 +30,7 @@
 .buttons > a {
   margin-top: 10px;
 }
+
+.presentation {
+  width: min(100vw, 900px);
+}
