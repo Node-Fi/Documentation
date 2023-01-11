@@ -1,0 +1,108 @@
+@import "tailwindcss/tailwind.css";
+
+/**
+        "relative",
+        "min-h-100",
+        "align-middle",
+*/
+
+.col_between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.info_row {
+  display: flex;
+  position: relative;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.info_row .content {
+  margin-left: 2rem;
+}
+
+.row {
+  display: flex;
+}
+
+.row_between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.selection_outer {
+  flex: 2;
+}
+
+.presentation_content {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+/**
+      <div
+        className={clsx(
+          "w-2",
+          "h-full",
+          "rounded-t-full",
+          "rounded-b-full",
+          "bg-gray-500",
+          "relative"
+        )}
+      >
+        <div
+          className={clsx(
+            "absolute",
+            `top-${selectedIndex}/${rows.length}`,
+            "left-0",
+            `h-1/${rows.length}`,
+            "rounded-t-full",
+            "rounded-b-full",
+            "bg-gray-900",
+            "transition-all"
+          )}
+        />
+      </div>
+*/
+
+.progress_bar_container {
+  margin-right: 1rem;
+  width: 8px;
+  height: 100%;
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+  background-color: var(--grey-500);
+  position: relative;
+}
+
+.progress_bar_container > div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+  background-color: var(--grey-900);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  height: 20px;
+  width: 6px;
+  top: 0;
+}
+
+.transition_opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
