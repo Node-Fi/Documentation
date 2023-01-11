@@ -52,8 +52,8 @@ export default function HomePage(): JSX.Element {
           flexDirection: "column",
         }}
       >
-        {/* <Home /> */}
-        <SelectablePresentation
+        <HomepageHeader />
+        {/* <SelectablePresentation
           presentationItems={[
             {
               mainImage: (
@@ -133,7 +133,7 @@ export default function HomePage(): JSX.Element {
             },
           ]}
           className={styles.presentation}
-        />
+        /> */}
       </div>
     </Layout>
   );
