@@ -107,7 +107,7 @@ const config = {
           },
           {
             type: "doc",
-            docId: "intro",
+            docId: "wallets/registering-a-wallet",
             position: "left",
             label: "Application API",
             docsPluginId: "application-api",
