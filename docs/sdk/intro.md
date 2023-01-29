@@ -1,47 +1,39 @@
 ---
 sidebar_position: 0
+slug: /
 ---
 
-# About
+# Intro
 
-Let's discover **NodeFinance**.
+:::warning Warning
 
-## Getting Started
+This documentation refers to a state of our SDK which is still in beta. Documentation and sdk functions are subject to change pending developer feedback.
 
-Get started by **creating a new site**.
+:::
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+The Node Finance SDK suite is tailored for mobile web3. Using the Node Finance SDKs you will be able to create application-specific web3 applications, or one super dapp that can do it all.
 
-### What you'll need
+SDKs are broken down into the following:
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- Core SDK
+- React Native SDK
+- Identity Kit
+- Secure Cloud Backup
 
-## Generate a new site
+#### Core SDK
 
-Generate a new Docusaurus site using the **classic template**.
+The core sdk covers a majority of the Node Finance APIs in pure typescript. This SDK can be used in mobile, web, or node environments.
 
-The classic template will automatically be added to your project after you run the command:
+#### React Native SDK
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+The react native SDK provides convenient hooks around the functionality exposed by Core SDK.
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+Additionally, the React Native SDK provides mobile-specific solutions such as securing wallet credentials via biometrics.
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+#### Identity Kit
 
-## Start your site
+The identity kit and identity services leverages zero knowledge to map off-chain identifiers to on-chain addresses. This is a one-way mapping, so you can go from phone number -> address, but not the other way around.
 
-Run the development server:
+#### Secure Cloud Backup
 
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Use this library to securely backup arbitrary data to user's cloud storage. Data is encrypted using AES before being uploaded to either iCloud or Google Drive.
