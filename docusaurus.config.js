@@ -33,7 +33,7 @@ const config = {
       ({
         docs: {
           path: "docs/sdk",
-          routeBasePath: "sdk",
+          routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -107,7 +107,7 @@ const config = {
           },
           {
             type: "doc",
-            docId: "intro",
+            docId: "wallets/registering-a-wallet",
             position: "left",
             label: "Application API",
             docsPluginId: "application-api",
@@ -125,13 +125,6 @@ const config = {
             position: "left",
             label: "Analytics API",
             docsPluginId: "data-and-analytics",
-          },
-          {
-            type: "doc",
-            docId: "auth-architecture",
-            position: "left",
-            label: "Authentification",
-            docsPluginId: "auth",
           },
           {
             href: "https://github.com/Node-Fi/",
