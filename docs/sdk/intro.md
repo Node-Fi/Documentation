@@ -11,29 +11,38 @@ This documentation refers to a state of our SDK which is still in beta. Document
 
 :::
 
-The Node Finance SDK suite is tailored for mobile web3. Using the Node Finance SDKs you will be able to create application-specific web3 applications, or one super dapp that can do it all.
+# Product Overview
 
-SDKs are broken down into the following:
+Node Finance is a non-custodial banking-as-a-service platform built on EVM blockchains, stablecoins, and DeFi protocols. Node’s primary product is a suite of mobile-first development kits that make it easy to embed web3 functionality within iOS and Android mobile apps, and is joined by several peripheral services, including an on-chain router and a wallet CRM.
 
-- Core SDK
-- React Native SDK
-- Identity Kit
-- Secure Cloud Backup
+### Our Mobile-First Product Suite
 
-#### Core SDK
+Node developer kits are React Native (Javascript) SDKs that make it easy to plug into different web3 primitives within mobile apps. Besides IdentityKit and NotificationKit, all are wrapped under a single SDK. We plan to expand these SDKs to support more development frameworks, such as Flutter (Dart), native iOS (Swift), and native Android (Kotlin).
 
-The core sdk covers a majority of the Node Finance APIs in pure typescript. This SDK can be used in mobile, web, or node environments.
+**[👤](https://emojipedia.org/bust-in-silhouette/) Wallet Factory**
 
-#### React Native SDK
+A set of tools to support embedded web3 wallets within a mobile app. Includes wallet creation (EOA, smart contract, or MPC), wallet recovery, and connecting an external signer via WalletConnect. WalletKit makes it easy for teams to offer seamless self-custody to their end users with modules that allow things like: encryption/decryption of private keys using FaceID (or system password), secure cloud backup of private keys (iCloud or Drive), offer social sign-in via Web3Auth, and initiate token transfers (or token transfer requests) via biometrics.
 
-The react native SDK provides convenient hooks around the functionality exposed by Core SDK.
+**📲 Identity Service**
 
-Additionally, the React Native SDK provides mobile-specific solutions such as securing wallet credentials via biometrics.
+A standalone service to map wallet addresses to phone numbers, creating a Zelle-like experience for mobile crypto payments. With IdentityKit, send crypto to users who **don’t even have a wallet yet** and help users more easily discover mutual contacts for social payments.
 
-#### Identity Kit
+**💵 Payment Kit**
 
-The identity kit and identity services leverages zero knowledge to map off-chain identifiers to on-chain addresses. This is a one-way mapping, so you can go from phone number -> address, but not the other way around.
+Easily facilitate on-chain payment requests between user wallets. Tap to pay via NFC (coming soon).
 
-#### Secure Cloud Backup
+**📈 Data Engine**
 
-Use this library to securely backup arbitrary data to user's cloud storage. Data is encrypted using AES before being uploaded to either iCloud or Google Drive.
+A set of endpoints to query state and historical data from EVMs. Pre-built queries for wallets (e.g. token balances, transaction history, portfolio value, etc), tokens (e.g. price, symbol, image), and DeFi protocols (e.g. TVL, APR, collateral ratios, etc). SDK provides more efficient state management and data dissemination.
+
+**🛎️ Notification Kit**
+
+An engine for realtime push notifications powered by event subscriptions via web-hooks. Use pre-built templates for wallets (e.g. notify when tokens received), tokens (e.g. notify when token X goes up by Y%), and DeFi protocols (e.g. notify if APR falls below Z%), or mix and match to create your own bespoke notification (e.g. notify if wallet A withdraws money from protocol B).
+
+**💱 DeFi Router**
+
+Offer in-app access to any DeFi primitive (swap, lend, stake, pool, farm, etc) with just a few lines of code. Powered by our on-chain Minima router, the DeFiKit makes it easy for any user to leverage access DeFi.
+
+**🔍 Compliance Dashboard**
+
+A set of tools for enforcing compliance. Examples include the ability to screen for OFAC sanctioned addresses and assemble a blacklist of addresses, which prevents our full nodes from processing any of their transactions (and logs IP + device info).
