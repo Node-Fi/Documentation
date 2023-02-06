@@ -158,7 +158,15 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Tutorial",
+                label: "SDK",
+                to: "/sdk/intro",
+              },
+              {
+                label: "API",
+                to: "/sdk/intro",
+              },
+              {
+                label: "Minima",
                 to: "/sdk/intro",
               },
             ],
@@ -167,8 +175,12 @@ const config = {
             title: "Community",
             items: [
               {
+                label: "Website",
+                href: "https://nodefinance.org",
+              },
+              {
                 label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
+                href: "https://discord.gg/EQzVKSNTPM",
               },
               {
                 label: "Twitter",

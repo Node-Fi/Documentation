@@ -7,7 +7,7 @@ slug: /
 
 :::warning Warning
 
-This documentation refers to a state of our SDK which is still in beta. Documentation and sdk functions are subject to change pending developer feedback.
+This documentation refers to a state of our SDK which is currently in **_alpha_**. Documentation and sdk functions are subject to change pending developer feedback.
 
 :::
 

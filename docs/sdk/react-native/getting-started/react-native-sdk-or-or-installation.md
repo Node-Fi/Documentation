@@ -7,18 +7,18 @@ sidebar_position: 1
 
 :::warning Warning
 
-This documentation refers to a state of our SDK which is still in beta. Documentation and sdk functions are subject to change pending developer feedback.
+This documentation refers to a state of our SDK which is currently in **_alpha_**. Documentation and sdk functions are subject to change pending developer feedback.
 
 :::
 
 Install the SDK and React-Native wrapper via your preferred package manager
 
 ```
-$ yarn add @node-fi/sdk-core@beta @node-fi/react-native-sdk@beta react-native-device-info react-native-keychain react-native-fast-crypto react-native-securerandom
+$ yarn add @node-fi/sdk-core@alpha @node-fi/react-native-sdk@alpha react-native-device-info react-native-keychain react-native-fast-crypto react-native-securerandom
 
                                 or
 
-$ npm install @node-fi/sdk-core@beta @node-fi/react-native-sdk@beta react-native-device-info react-native-keychain react-native-fast-crypto react-native-securerandom
+$ npm install @node-fi/sdk-core@alpha @node-fi/react-native-sdk@alpha react-native-device-info react-native-keychain react-native-fast-crypto react-native-securerandom
 ```
 
 #### For iOS
