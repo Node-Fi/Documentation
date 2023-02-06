@@ -119,13 +119,13 @@ const config = {
             docId: "intro",
             docsPluginId: "minima",
           },
-          {
-            type: "doc",
-            docId: "about",
-            position: "left",
-            label: "Analytics API",
-            docsPluginId: "data-and-analytics",
-          },
+          // {
+          //   type: "doc",
+          //   docId: "about",
+          //   position: "left",
+          //   label: "Analytics API",
+          //   docsPluginId: "data-and-analytics",
+          // },
           {
             href: "https://github.com/Node-Fi/",
             label: "GitHub",

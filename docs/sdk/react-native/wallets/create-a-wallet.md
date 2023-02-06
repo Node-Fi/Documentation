@@ -9,6 +9,8 @@ Creating a wallet can be done with one single function! The SDK currently suppor
 
 Create wallet takes an argument of type `WalletCreationOpts`, allowing to create a wallet from a mnemonic, set the default gas currency on wallet creation, or create declare the language for the mnemonic to be created in. Note that alternate gas currencies are only supported on Celo and Alfajores.
 
+Learn about wallet registration options and its purpose in [Wallet Registration.](./registering-wallet.md)
+
 ```typescript
 import { useCreateWallet } from "@node-fi/react-native-wrapper";
 
@@ -48,11 +50,16 @@ createWallet({ bip39Language }).then((wallet) => {
 
 #### useWallet: () => (opts: WalletCreationOpts) => Wallet
 
-```typescript
+````typescript
 interface WalletCreationOpts {
   defaultGasCurrency?: Address;
   mnemonic?: string;
+  privateKey?: string;
   bip39Language?: MnemonicLanguageOption;
+  registrationOptions: {
+    optInMetatdata: boolean;
+    doNotRegister: boolean;
+  };
 }
 
 type MnemonicLanguageOption =
@@ -65,5 +72,5 @@ type MnemonicLanguageOption =
   | "japanese"
   | "korean"
   | "portuguese"
-  | "spanish";
-```
+  | "spanish";```
+````

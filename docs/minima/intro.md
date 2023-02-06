@@ -1,47 +1,36 @@
 ---
-sidebar_position: 1
+description: >-
+  A novel on-chain router that supports almost every protocol—not just tokens.
+  Built by Node Finance.
+
+sidebar_position: 0
 ---
 
-# Intro
+# Minima DeFi Router
 
-Let's discover **Minima**.
+## What makes Minima unique?
 
-## Getting Started
+Minima is not your ordinary router. Unlike existing solutions like 0x and 1inch, Minima supports routes through liquidity pool (LP) tokens, Mento, farming contracts, gauges, liquid staking contracts, and more. In this way, you can view Minima as ‘The Everything Router.’ Fully on-chain and non-custodial.&#x20;
 
-Get started by **creating a new site**.
+## Example use-cases
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+1. Offer the most price-efficient swaps in your application
+2. Let your users cash-in/out to any currency by routing their order to the most liquid token
+3. 1-click yield for any yield-bearing position (yield farms, lending, etc)
+4. Offer price-efficient staking with minting and routing for exiting your stake
 
-### What you'll need
+## Want to jump right in?
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+Feeling like an eager beaver? Jump in to the quick start docs and get making your first request:
 
-## Generate a new site
+{% content-ref url="quick-start.md" %}
+[quick-start.md](quick-start.md)
+{% endcontent-ref %}
 
-Generate a new Docusaurus site using the **classic template**.
+## Want to deep dive?
 
-The classic template will automatically be added to your project after you run the command:
+Dive a little deeper and start exploring our API reference to get an idea of everything that's possible with the API:
 
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+{% content-ref url="reference/api-reference/" %}
+[api-reference](reference/api-reference/)
+{% endcontent-ref %}

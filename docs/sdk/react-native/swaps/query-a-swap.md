@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Query a Swap
 
 In most cases, the best hook to use for querying swap quotes is `useSwapTypedAmount`
