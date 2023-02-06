@@ -1,0 +1,8 @@
+{
+  "label": "Wallets",
+  "position": 0,
+  "link": {
+    "type": "generated-index",
+    "description": "Core wallet and various signer implementations for chain-specific needs."
+  }
+}

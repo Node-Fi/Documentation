@@ -1,98 +1,96 @@
-# EventTypes
+[@node-fi/sdk-core](../README.md) / [Exports](../modules.md) / EventTypes
 
-[@node-fi/sdk-core](../) / [Exports](../modules.md) / EventTypes
+# Enumeration: EventTypes
 
-## Enumeration: EventTypes
-
-### Table of contents
-
-#### Enumeration Members
-
-* [CONTRACT\_CALL](eventtypes.md#contract\_call)
-* [ESCROW\_RECEIVED](eventtypes.md#escrow\_received)
-* [ESCROW\_SENT](eventtypes.md#escrow\_sent)
-* [EXCHANGE](eventtypes.md#exchange)
-* [FAUCET](eventtypes.md#faucet)
-* [RECEIVED](eventtypes.md#received)
-* [SENT](eventtypes.md#sent)
-* [VERIFICATION\_FEE](eventtypes.md#verification\_fee)
+## Table of contents
 
 ### Enumeration Members
 
-#### CONTRACT\_CALL
+- [CONTRACT\_CALL](EventTypes.md#contract_call)
+- [ESCROW\_RECEIVED](EventTypes.md#escrow_received)
+- [ESCROW\_SENT](EventTypes.md#escrow_sent)
+- [EXCHANGE](EventTypes.md#exchange)
+- [FAUCET](EventTypes.md#faucet)
+- [RECEIVED](EventTypes.md#received)
+- [SENT](EventTypes.md#sent)
+- [VERIFICATION\_FEE](EventTypes.md#verification_fee)
 
-• **CONTRACT\_CALL** = `"CONTRACT_CALL"`
+## Enumeration Members
 
-**Defined in**
+### CONTRACT\_CALL
 
-[Transactions/types.ts:12](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L12)
+• **CONTRACT\_CALL** = ``"CONTRACT_CALL"``
 
-***
+#### Defined in
 
-#### ESCROW\_RECEIVED
+[packages/sdk-core/src/Transactions/types.ts:11](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L11)
 
-• **ESCROW\_RECEIVED** = `"ESCROW_RECEIVED"`
+___
 
-**Defined in**
+### ESCROW\_RECEIVED
 
-[Transactions/types.ts:11](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L11)
+• **ESCROW\_RECEIVED** = ``"ESCROW_RECEIVED"``
 
-***
+#### Defined in
 
-#### ESCROW\_SENT
+[packages/sdk-core/src/Transactions/types.ts:10](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L10)
 
-• **ESCROW\_SENT** = `"ESCROW_SENT"`
+___
 
-**Defined in**
+### ESCROW\_SENT
 
-[Transactions/types.ts:10](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L10)
+• **ESCROW\_SENT** = ``"ESCROW_SENT"``
 
-***
+#### Defined in
 
-#### EXCHANGE
+[packages/sdk-core/src/Transactions/types.ts:9](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L9)
 
-• **EXCHANGE** = `"EXCHANGE"`
+___
 
-**Defined in**
+### EXCHANGE
 
-[Transactions/types.ts:5](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L5)
+• **EXCHANGE** = ``"EXCHANGE"``
 
-***
+#### Defined in
 
-#### FAUCET
+[packages/sdk-core/src/Transactions/types.ts:4](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L4)
 
-• **FAUCET** = `"FAUCET"`
+___
 
-**Defined in**
+### FAUCET
 
-[Transactions/types.ts:8](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L8)
+• **FAUCET** = ``"FAUCET"``
 
-***
+#### Defined in
 
-#### RECEIVED
+[packages/sdk-core/src/Transactions/types.ts:7](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L7)
 
-• **RECEIVED** = `"RECEIVED"`
+___
 
-**Defined in**
+### RECEIVED
 
-[Transactions/types.ts:6](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L6)
+• **RECEIVED** = ``"RECEIVED"``
 
-***
+#### Defined in
 
-#### SENT
+[packages/sdk-core/src/Transactions/types.ts:5](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L5)
 
-• **SENT** = `"SENT"`
+___
 
-**Defined in**
+### SENT
 
-[Transactions/types.ts:7](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L7)
+• **SENT** = ``"SENT"``
 
-***
+#### Defined in
 
-#### VERIFICATION\_FEE
+[packages/sdk-core/src/Transactions/types.ts:6](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L6)
 
-• **VERIFICATION\_FEE** = `"VERIFICATION_FEE"`
+___
 
-**Defined in**
+### VERIFICATION\_FEE
 
-[Transactions/types.ts:9](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L9)
+• **VERIFICATION\_FEE** = ``"VERIFICATION_FEE"``
+
+#### Defined in
+
+[packages/sdk-core/src/Transactions/types.ts:8](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L8)

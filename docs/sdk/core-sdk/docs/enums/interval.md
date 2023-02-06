@@ -1,67 +1,65 @@
-# Interval
+[@node-fi/sdk-core](../README.md) / [Exports](../modules.md) / Interval
 
-[@node-fi/sdk-core](../) / [Exports](../modules.md) / Interval
-
-## Enumeration: Interval
+# Enumeration: Interval
 
 Interval type used for historical queries
 
-### Table of contents
-
-#### Enumeration Members
-
-* [Day](interval.md#day)
-* [FifteenMinute](interval.md#fifteenminute)
-* [FiveMinute](interval.md#fiveminute)
-* [Hour](interval.md#hour)
-* [ThirtyMinute](interval.md#thirtyminute)
+## Table of contents
 
 ### Enumeration Members
 
-#### Day
+- [Day](Interval.md#day)
+- [FifteenMinute](Interval.md#fifteenminute)
+- [FiveMinute](Interval.md#fiveminute)
+- [Hour](Interval.md#hour)
+- [ThirtyMinute](Interval.md#thirtyminute)
 
-• **Day** = `4`
+## Enumeration Members
 
-**Defined in**
+### Day
 
-[constants/index.ts:32](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/constants/index.ts#L32)
+• **Day** = ``4``
 
-***
+#### Defined in
 
-#### FifteenMinute
+[packages/sdk-core/src/constants/index.ts:30](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/constants/index.ts#L30)
 
-• **FifteenMinute** = `1`
+___
 
-**Defined in**
+### FifteenMinute
 
-[constants/index.ts:29](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/constants/index.ts#L29)
+• **FifteenMinute** = ``1``
 
-***
+#### Defined in
 
-#### FiveMinute
+[packages/sdk-core/src/constants/index.ts:27](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/constants/index.ts#L27)
 
-• **FiveMinute** = `0`
+___
 
-**Defined in**
+### FiveMinute
 
-[constants/index.ts:28](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/constants/index.ts#L28)
+• **FiveMinute** = ``0``
 
-***
+#### Defined in
 
-#### Hour
+[packages/sdk-core/src/constants/index.ts:26](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/constants/index.ts#L26)
 
-• **Hour** = `3`
+___
 
-**Defined in**
+### Hour
 
-[constants/index.ts:31](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/constants/index.ts#L31)
+• **Hour** = ``3``
 
-***
+#### Defined in
 
-#### ThirtyMinute
+[packages/sdk-core/src/constants/index.ts:29](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/constants/index.ts#L29)
 
-• **ThirtyMinute** = `2`
+___
 
-**Defined in**
+### ThirtyMinute
 
-[constants/index.ts:30](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/constants/index.ts#L30)
+• **ThirtyMinute** = ``2``
+
+#### Defined in
+
+[packages/sdk-core/src/constants/index.ts:28](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/constants/index.ts#L28)

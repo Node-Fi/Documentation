@@ -1,76 +1,74 @@
-# DateRange
+[@node-fi/sdk-core](../README.md) / [Exports](../modules.md) / DateRange
 
-[@node-fi/sdk-core](../) / [Exports](../modules.md) / DateRange
+# Enumeration: DateRange
 
-## Enumeration: DateRange
-
-### Table of contents
-
-#### Enumeration Members
-
-* [1D](daterange.md#1d)
-* [1H](daterange.md#1h)
-* [1M](daterange.md#1m)
-* [1W](daterange.md#1w)
-* [1Y](daterange.md#1y)
-* [ALL](daterange.md#all)
+## Table of contents
 
 ### Enumeration Members
 
-#### 1D
+- [1D](DateRange.md#1d)
+- [1H](DateRange.md#1h)
+- [1M](DateRange.md#1m)
+- [1W](DateRange.md#1w)
+- [1Y](DateRange.md#1y)
+- [ALL](DateRange.md#all)
 
-• **1D** = `1`
+## Enumeration Members
 
-**Defined in**
+### 1D
 
-[constants/index.ts:62](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/constants/index.ts#L62)
+• **1D** = ``1``
 
-***
+#### Defined in
 
-#### 1H
+[packages/sdk-core/src/constants/index.ts:54](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/constants/index.ts#L54)
 
-• **1H** = `0`
+___
 
-**Defined in**
+### 1H
 
-[constants/index.ts:61](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/constants/index.ts#L61)
+• **1H** = ``0``
 
-***
+#### Defined in
 
-#### 1M
+[packages/sdk-core/src/constants/index.ts:53](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/constants/index.ts#L53)
 
-• **1M** = `30`
+___
 
-**Defined in**
+### 1M
 
-[constants/index.ts:64](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/constants/index.ts#L64)
+• **1M** = ``30``
 
-***
+#### Defined in
 
-#### 1W
+[packages/sdk-core/src/constants/index.ts:56](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/constants/index.ts#L56)
 
-• **1W** = `7`
+___
 
-**Defined in**
+### 1W
 
-[constants/index.ts:63](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/constants/index.ts#L63)
+• **1W** = ``7``
 
-***
+#### Defined in
 
-#### 1Y
+[packages/sdk-core/src/constants/index.ts:55](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/constants/index.ts#L55)
 
-• **1Y** = `365`
+___
 
-**Defined in**
+### 1Y
 
-[constants/index.ts:65](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/constants/index.ts#L65)
+• **1Y** = ``365``
 
-***
+#### Defined in
 
-#### ALL
+[packages/sdk-core/src/constants/index.ts:57](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/constants/index.ts#L57)
 
-• **ALL** = `-1`
+___
 
-**Defined in**
+### ALL
 
-[constants/index.ts:66](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/constants/index.ts#L66)
+• **ALL** = ``-1``
+
+#### Defined in
+
+[packages/sdk-core/src/constants/index.ts:58](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/constants/index.ts#L58)

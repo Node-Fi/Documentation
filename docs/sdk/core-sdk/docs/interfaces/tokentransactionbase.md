@@ -1,84 +1,71 @@
-# TokenTransactionBase
+[@node-fi/sdk-core](../README.md) / [Exports](../modules.md) / TokenTransactionBase
 
-[@node-fi/sdk-core](../) / [Exports](../modules.md) / TokenTransactionBase
+# Interface: TokenTransactionBase
 
-## Interface: TokenTransactionBase
+## Hierarchy
 
-### Hierarchy
+- **`TokenTransactionBase`**
 
-*   **`TokenTransactionBase`**
+  ↳ [`TokenTransferTransaction`](TokenTransferTransaction.md)
 
-    ↳ [`TokenTransferTransaction`](tokentransfertransaction.md)
+  ↳ [`TokenSwapTransaction`](TokenSwapTransaction.md)
 
-    ↳ [`TokenSwapTransaction`](tokenswaptransaction.md)
-
-### Table of contents
-
-#### Properties
-
-* [\_type](tokentransactionbase.md#\_type)
-* [blockNumber](tokentransactionbase.md#blocknumber)
-* [contract](tokentransactionbase.md#contract)
-* [fee](tokentransactionbase.md#fee)
-* [timestamp](tokentransactionbase.md#timestamp)
-* [transactionHash](tokentransactionbase.md#transactionhash)
+## Table of contents
 
 ### Properties
 
-#### \_type
+- [\_type](TokenTransactionBase.md#_type)
+- [blockNumber](TokenTransactionBase.md#blocknumber)
+- [contract](TokenTransactionBase.md#contract)
+- [timestamp](TokenTransactionBase.md#timestamp)
+- [transactionHash](TokenTransactionBase.md#transactionhash)
 
-• **\_type**: [`TokenTransactionType`](../enums/tokentransactiontype.md)
+## Properties
 
-**Defined in**
+### \_type
 
-[Transactions/types.ts:32](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L32)
+• **\_type**: [`TokenTransactionType`](../enums/TokenTransactionType.md)
 
-***
+#### Defined in
 
-#### blockNumber
+[packages/sdk-core/src/Transactions/types.ts:45](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L45)
+
+___
+
+### blockNumber
 
 • **blockNumber**: `number`
 
-**Defined in**
+#### Defined in
 
-[Transactions/types.ts:35](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L35)
+[packages/sdk-core/src/Transactions/types.ts:48](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L48)
 
-***
+___
 
-#### contract
+### contract
 
 • **contract**: `string`
 
-**Defined in**
+#### Defined in
 
-[Transactions/types.ts:33](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L33)
+[packages/sdk-core/src/Transactions/types.ts:46](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L46)
 
-***
+___
 
-#### fee
-
-• `Optional` **fee**: [`FeeInfo`](feeinfo.md)
-
-**Defined in**
-
-[Transactions/types.ts:37](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L37)
-
-***
-
-#### timestamp
+### timestamp
 
 • **timestamp**: `number`
 
-**Defined in**
+#### Defined in
 
-[Transactions/types.ts:34](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L34)
+[packages/sdk-core/src/Transactions/types.ts:47](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L47)
 
-***
+___
 
-#### transactionHash
+### transactionHash
 
 • **transactionHash**: `string`
 
-**Defined in**
+#### Defined in
 
-[Transactions/types.ts:36](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L36)
+[packages/sdk-core/src/Transactions/types.ts:49](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L49)
