@@ -3,6 +3,8 @@ description: Get up and running with the Minima API
 sidebar_position: 0.1
 ---
 
+import ApiSchema from "@theme/ApiSchema";
+
 # Quick Start
 
 ## API keys (optional)
@@ -22,7 +24,10 @@ Include your API key in the header such as the following:
 X-API-KEY = <API Key>
 ```
 
-<div class="alert alert--info">Good to know: API Keys are entirely optional, your integration will still work without them!</div>
+<div class="alert alert--info">
+  Good to know: API Keys are entirely optional, your integration will still work
+  without them!
+</div>
 
 ## Make your first request
 
@@ -31,12 +36,6 @@ To make your first request, send an authenticated request to the pets endpoint. 
 {% swagger src="https://raw.githubusercontent.com/Node-Fi/Specs/main/NodeRouter.yaml" path="/routes" method="get" %}
 [https://raw.githubusercontent.com/Node-Fi/Specs/main/NodeRouter.yaml](https://raw.githubusercontent.com/Node-Fi/Specs/main/NodeRouter.yaml)
 {% endswagger %}
-
-<iframe src="https://raw.githubusercontent.com/Node-Fi/Specs/main/NodeRouter.yaml" width="100%" height="500px" frameborder="0" scrolling="no"></iframe>
-
-{% hint style="info" %}
-**Good to know:** If a route cannot be found between two tokens, you will receive an error message which designates that.
-{% endhint %}
 
 Take a look at how you might call this method:
 
