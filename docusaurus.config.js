@@ -8,16 +8,11 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Node Finance Documentation",
   tagline: "Your one-stop-shop for Web3 Infrastructure",
-  url: "https://your-docusaurus-test-site.com",
+  url: "https://docs.nodefinance.org",
   baseUrl: "/",
-  onBrokenLinks: "warn",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenLinks: "ignore",
+  onBrokenMarkdownLinks: "ignore",
   favicon: "img/node-logo.png",
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "@node-fi", // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -113,7 +108,7 @@ const config = {
         hideOnScroll: true,
         title: "Node Finance",
         logo: {
-          alt: "My Site Logo",
+          alt: "Node Logo",
           src: "img/node-logo.png",
         },
         items: [
