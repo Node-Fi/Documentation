@@ -11,13 +11,13 @@ This page covers how to get quickly up-and-running with the Node Identity SDK
 #### via yarn
 
 ```bash
-yarn add @node-fi/identity
+yarn add @node-fi/identity@alpha
 ```
 
 #### via npm
 
 ```bash
-npm install @node-fi/identity
+npm install @node-fi/identity@alpha
 ```
 
 ### Get started
@@ -44,9 +44,11 @@ In some cases, an identifier may link to multiple addresses. To handle this case
 import { NodeIdentityKit, Attestor } from "@node-fi/identity";
 import { getApiKey, TokenAmount, Wallet } from "@node-fi/sdk-core";
 
+const TRUSTED_ATTESTORS = ["node", "valora", "kaala"];
+
 const kit = new NodeIdentityKit(
   getApiKey(),
-  Attestor.fetchByNames(["node", "valora", "kaala"])
+  TRUSTED_ATTESTORS.flatMap((name) => Attestor.findBy("name", name).issuers)
 );
 
 const sendToPhoneNumber = async (
