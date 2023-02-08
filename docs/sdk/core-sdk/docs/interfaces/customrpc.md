@@ -1,32 +1,30 @@
-# CustomRPC
+[@node-fi/sdk-core](../README.md) / [Exports](../modules.md) / CustomRPC
 
-[@node-fi/sdk-core](../) / [Exports](../modules.md) / CustomRPC
+# Interface: CustomRPC
 
-## Interface: CustomRPC
-
-### Table of contents
-
-#### Properties
-
-* [http](customrpc.md#http)
-* [wss](customrpc.md#wss)
+## Table of contents
 
 ### Properties
 
-#### http
+- [http](CustomRPC.md#http)
+- [wss](CustomRPC.md#wss)
+
+## Properties
+
+### http
 
 • `Optional` **http**: `string`
 
-**Defined in**
+#### Defined in
 
-[constants/index.ts:36](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/constants/index.ts#L36)
+[packages/sdk-core/src/constants/index.ts:34](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/constants/index.ts#L34)
 
-***
+___
 
-#### wss
+### wss
 
 • `Optional` **wss**: `string`
 
-**Defined in**
+#### Defined in
 
-[constants/index.ts:37](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/constants/index.ts#L37)
+[packages/sdk-core/src/constants/index.ts:35](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/constants/index.ts#L35)

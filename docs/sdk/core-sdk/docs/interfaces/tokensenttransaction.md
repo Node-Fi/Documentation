@@ -1,166 +1,155 @@
-# TokenSentTransaction
+[@node-fi/sdk-core](../README.md) / [Exports](../modules.md) / TokenSentTransaction
 
-[@node-fi/sdk-core](../) / [Exports](../modules.md) / TokenSentTransaction
+# Interface: TokenSentTransaction<TokenAmountShape\>
 
-## Interface: TokenSentTransaction
+## Type parameters
 
-### Hierarchy
+| Name | Type |
+| :------ | :------ |
+| `TokenAmountShape` | `SerlializedTokenAmount` |
 
-*   [`TokenTransferTransaction`](tokentransfertransaction.md)
+## Hierarchy
 
-    ↳ **`TokenSentTransaction`**
+- [`TokenTransferTransaction`](TokenTransferTransaction.md)<`TokenAmountShape`\>
 
-### Table of contents
+  ↳ **`TokenSentTransaction`**
 
-#### Properties
-
-* [\_type](tokensenttransaction.md#\_type)
-* [amount](tokensenttransaction.md#amount)
-* [blockNumber](tokensenttransaction.md#blocknumber)
-* [contract](tokensenttransaction.md#contract)
-* [fee](tokensenttransaction.md#fee)
-* [fromAddress](tokensenttransaction.md#fromaddress)
-* [timestamp](tokensenttransaction.md#timestamp)
-* [toAddress](tokensenttransaction.md#toaddress)
-* [transactionHash](tokensenttransaction.md#transactionhash)
-* [valueInLocalCurrency](tokensenttransaction.md#valueinlocalcurrency)
+## Table of contents
 
 ### Properties
 
-#### \_type
+- [\_type](TokenSentTransaction.md#_type)
+- [amount](TokenSentTransaction.md#amount)
+- [blockNumber](TokenSentTransaction.md#blocknumber)
+- [contract](TokenSentTransaction.md#contract)
+- [fromAddress](TokenSentTransaction.md#fromaddress)
+- [timestamp](TokenSentTransaction.md#timestamp)
+- [toAddress](TokenSentTransaction.md#toaddress)
+- [transactionHash](TokenSentTransaction.md#transactionhash)
+- [valueInLocalCurrency](TokenSentTransaction.md#valueinlocalcurrency)
 
-• **\_type**: [`SENT`](../enums/tokentransactiontype.md#sent)
+## Properties
 
-**Overrides**
+### \_type
 
-[TokenTransferTransaction](tokentransfertransaction.md).[\_type](tokentransfertransaction.md#\_type)
+• **\_type**: [`SENT`](../enums/TokenTransactionType.md#sent)
 
-**Defined in**
+#### Overrides
 
-[Transactions/types.ts:49](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L49)
+[TokenTransferTransaction](TokenTransferTransaction.md).[_type](TokenTransferTransaction.md#_type)
 
-***
+#### Defined in
 
-#### amount
+[packages/sdk-core/src/Transactions/types.ts:70](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L70)
 
-• **amount**: [`TokenAmount`](../classes/tokenamount.md)
+___
 
-**Inherited from**
+### amount
 
-[TokenTransferTransaction](tokentransfertransaction.md).[amount](tokentransfertransaction.md#amount)
+• **amount**: `TokenAmountShape`
 
-**Defined in**
+#### Inherited from
 
-[Transactions/types.ts:44](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L44)
+[TokenTransferTransaction](TokenTransferTransaction.md).[amount](TokenTransferTransaction.md#amount)
 
-***
+#### Defined in
 
-#### blockNumber
+[packages/sdk-core/src/Transactions/types.ts:64](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L64)
+
+___
+
+### blockNumber
 
 • **blockNumber**: `number`
 
-**Inherited from**
+#### Inherited from
 
-[TokenTransferTransaction](tokentransfertransaction.md).[blockNumber](tokentransfertransaction.md#blocknumber)
+[TokenTransferTransaction](TokenTransferTransaction.md).[blockNumber](TokenTransferTransaction.md#blocknumber)
 
-**Defined in**
+#### Defined in
 
-[Transactions/types.ts:35](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L35)
+[packages/sdk-core/src/Transactions/types.ts:48](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L48)
 
-***
+___
 
-#### contract
+### contract
 
 • **contract**: `string`
 
-**Inherited from**
+#### Inherited from
 
-[TokenTransferTransaction](tokentransfertransaction.md).[contract](tokentransfertransaction.md#contract)
+[TokenTransferTransaction](TokenTransferTransaction.md).[contract](TokenTransferTransaction.md#contract)
 
-**Defined in**
+#### Defined in
 
-[Transactions/types.ts:33](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L33)
+[packages/sdk-core/src/Transactions/types.ts:46](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L46)
 
-***
+___
 
-#### fee
-
-• `Optional` **fee**: [`FeeInfo`](feeinfo.md)
-
-**Inherited from**
-
-[TokenTransferTransaction](tokentransfertransaction.md).[fee](tokentransfertransaction.md#fee)
-
-**Defined in**
-
-[Transactions/types.ts:37](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L37)
-
-***
-
-#### fromAddress
+### fromAddress
 
 • **fromAddress**: `string`
 
-**Inherited from**
+#### Inherited from
 
-[TokenTransferTransaction](tokentransfertransaction.md).[fromAddress](tokentransfertransaction.md#fromaddress)
+[TokenTransferTransaction](TokenTransferTransaction.md).[fromAddress](TokenTransferTransaction.md#fromaddress)
 
-**Defined in**
+#### Defined in
 
-[Transactions/types.ts:43](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L43)
+[packages/sdk-core/src/Transactions/types.ts:63](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L63)
 
-***
+___
 
-#### timestamp
+### timestamp
 
 • **timestamp**: `number`
 
-**Inherited from**
+#### Inherited from
 
-[TokenTransferTransaction](tokentransfertransaction.md).[timestamp](tokentransfertransaction.md#timestamp)
+[TokenTransferTransaction](TokenTransferTransaction.md).[timestamp](TokenTransferTransaction.md#timestamp)
 
-**Defined in**
+#### Defined in
 
-[Transactions/types.ts:34](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L34)
+[packages/sdk-core/src/Transactions/types.ts:47](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L47)
 
-***
+___
 
-#### toAddress
+### toAddress
 
 • **toAddress**: `string`
 
-**Inherited from**
+#### Inherited from
 
-[TokenTransferTransaction](tokentransfertransaction.md).[toAddress](tokentransfertransaction.md#toaddress)
+[TokenTransferTransaction](TokenTransferTransaction.md).[toAddress](TokenTransferTransaction.md#toaddress)
 
-**Defined in**
+#### Defined in
 
-[Transactions/types.ts:42](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L42)
+[packages/sdk-core/src/Transactions/types.ts:62](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L62)
 
-***
+___
 
-#### transactionHash
+### transactionHash
 
 • **transactionHash**: `string`
 
-**Inherited from**
+#### Inherited from
 
-[TokenTransferTransaction](tokentransfertransaction.md).[transactionHash](tokentransfertransaction.md#transactionhash)
+[TokenTransferTransaction](TokenTransferTransaction.md).[transactionHash](TokenTransferTransaction.md#transactionhash)
 
-**Defined in**
+#### Defined in
 
-[Transactions/types.ts:36](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L36)
+[packages/sdk-core/src/Transactions/types.ts:49](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L49)
 
-***
+___
 
-#### valueInLocalCurrency
+### valueInLocalCurrency
 
 • `Optional` **valueInLocalCurrency**: `number`
 
-**Inherited from**
+#### Inherited from
 
-[TokenTransferTransaction](tokentransfertransaction.md).[valueInLocalCurrency](tokentransfertransaction.md#valueinlocalcurrency)
+[TokenTransferTransaction](TokenTransferTransaction.md).[valueInLocalCurrency](TokenTransferTransaction.md#valueinlocalcurrency)
 
-**Defined in**
+#### Defined in
 
-[Transactions/types.ts:45](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L45)
+[packages/sdk-core/src/Transactions/types.ts:65](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L65)

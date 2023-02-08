@@ -1,54 +1,52 @@
-# PageInfo
+[@node-fi/sdk-core](../README.md) / [Exports](../modules.md) / PageInfo
 
-[@node-fi/sdk-core](../) / [Exports](../modules.md) / PageInfo
+# Interface: PageInfo
 
-## Interface: PageInfo
-
-### Table of contents
-
-#### Properties
-
-* [currentPage](pageinfo.md#currentpage)
-* [perPage](pageinfo.md#perpage)
-* [total](pageinfo.md#total)
-* [totalPages](pageinfo.md#totalpages)
+## Table of contents
 
 ### Properties
 
-#### currentPage
+- [currentPage](PageInfo.md#currentpage)
+- [perPage](PageInfo.md#perpage)
+- [total](PageInfo.md#total)
+- [totalPages](PageInfo.md#totalpages)
+
+## Properties
+
+### currentPage
 
 • **currentPage**: `number`
 
-**Defined in**
+#### Defined in
 
-[constants/index.ts:54](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/constants/index.ts#L54)
+[packages/sdk-core/src/constants/index.ts:46](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/constants/index.ts#L46)
 
-***
+___
 
-#### perPage
+### perPage
 
 • **perPage**: `number`
 
-**Defined in**
+#### Defined in
 
-[constants/index.ts:56](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/constants/index.ts#L56)
+[packages/sdk-core/src/constants/index.ts:48](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/constants/index.ts#L48)
 
-***
+___
 
-#### total
+### total
 
 • **total**: `number`
 
-**Defined in**
+#### Defined in
 
-[constants/index.ts:57](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/constants/index.ts#L57)
+[packages/sdk-core/src/constants/index.ts:49](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/constants/index.ts#L49)
 
-***
+___
 
-#### totalPages
+### totalPages
 
 • **totalPages**: `number`
 
-**Defined in**
+#### Defined in
 
-[constants/index.ts:55](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/constants/index.ts#L55)
+[packages/sdk-core/src/constants/index.ts:47](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/constants/index.ts#L47)

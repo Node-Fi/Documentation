@@ -9,6 +9,8 @@ Recovering a wallet is very similar to creating one. In fact, the same exact met
 
 Create wallet takes an argument of type `WalletCreationOpts`, which allows the mnemonic or privateKey to be provided for the wallet.
 
+Learn about wallet registration options and its purpose in [Wallet Registration.](./registering-wallet.md)
+
 ```typescript
 import { useCreateWallet } from "@node-fi/react-native-wrapper";
 

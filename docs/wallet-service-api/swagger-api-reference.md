@@ -1,2 +1,0 @@
-# Swagger API Reference
-

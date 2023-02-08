@@ -1,0 +1,8 @@
+{
+  "label": "Trade Routing",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Leverage Node's DeFi router for efficient trades."
+  }
+}

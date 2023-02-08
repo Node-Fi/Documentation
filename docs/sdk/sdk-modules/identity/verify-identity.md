@@ -38,7 +38,17 @@ The return payload will include a `verification` field with the following proper
 
 ### Handling Already Verified Phonenumbers
 
-If the phone number is already mapped to the given address, then the status will be `'verified'` and no further action is necessary.
+If the phone number is already mapped to an given address, then the status will be `'verified'` and no further action is necessary. `startVerification` has an optional third parameter `force?: boolean`, which if true will force an attestation to be initiated for the given phone number, even if the phone number is already attested by a given trusted attestor.
+
+```ts
+// If already verified, then try again but force the start of attestation
+
+kit.startVerification("0xbeefbeefbeefbeef ...", "+1 (123) 456-7890").then((resp) => {
+    if
+})
+```
+
+---
 
 ### Complete the verification process
 
@@ -48,4 +58,67 @@ Assign your text field a type of `textContentType="oneTimeCode"` to trigger auto
 
 :::
 
-If the status is `"pending"`, then the return payload also includes a callback `submit(code: string)`, which will accept the six-digit code sent to the provided phone number. Once `submit` is called with the correct six-digit code, the verification process will complete and the returned `verification` field will have a status of `"verified"`.
+On a successful attestation initialization, the NodeIdentityKit object will record the phone number and address of the pending attestation. To complete the attestation, simply use
+
+```ts
+kit.submitVerification(otp);
+```
+
+to submit the one time password sent by Node.
+
+If you end up using a different instance of the NodeIdentityKit, then you will also need to provide the address and phonenumber again, in the same format as previously provided.
+
+This would look like:
+
+```ts
+kit.submitVerification(opt, address, phonenumber);
+```
+
+Here is a full example:
+
+```tsx
+import { NodeIdentityKit } from "@node-fi/identity";
+
+const kit = new NodeIdentityKit("my-api-key");
+
+enum ApprovalState {
+  INITIAL,
+  VERIFICATION_START_LOADING,
+  VERIFICATION_START_ERROR,
+  VERIFICATION_START_SUCCESS,
+  VERIFICATION_SUBMIT_LOADING,
+  VERIFICATION_SUBMIT_ERROR,
+  VERIFICATION_SUBMIT_SUCCESS,
+  ALREADY_VERIFIED,
+}
+
+function Verification() {
+  const [state, setState] = useState<ApprovalState>(ApprovalState.INITIAL);
+  const onSubmitPhonenumber = useCallback(async (phonnumber: string) => {
+    setState(ApprovalState.VERIFICATION_START_LOADING);
+
+    try {
+        { verification: { status } } = await kit.startVerification(address, phonenumber);
+
+        if (status === "verified") setState(ApprovalState.ALREADY_VERIFIED);
+        else setState(ApprovalState.VERIFICATION_START_SUCCESS);
+
+    } catch () {
+        setState(ApprovalState.VERIFICATION_START_ERROR)
+    }
+  }, []);
+
+  const onSubmitOtp = useCallback(async (otp: string | number) => {
+    setState(ApprovalState.VERIFICATION_SUBMIT_LOADING)
+
+    try {
+        await kit.submitVerification(otp)
+        setState(ApprovalState.VERIFICATION_SUBMIT_SUCCESS)
+    } catch () {
+        setState(ApprovalState.VERIFICATION_SUBMIT_ERROR)
+    }
+  })
+
+  ...
+}
+```

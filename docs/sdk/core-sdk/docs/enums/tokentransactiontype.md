@@ -1,109 +1,107 @@
-# TokenTransactionType
+[@node-fi/sdk-core](../README.md) / [Exports](../modules.md) / TokenTransactionType
 
-[@node-fi/sdk-core](../) / [Exports](../modules.md) / TokenTransactionType
+# Enumeration: TokenTransactionType
 
-## Enumeration: TokenTransactionType
-
-### Table of contents
-
-#### Enumeration Members
-
-* [EXCHANGE](tokentransactiontype.md#exchange)
-* [INVITE\_RECEIVED](tokentransactiontype.md#invite\_received)
-* [INVITE\_SENT](tokentransactiontype.md#invite\_sent)
-* [NFT\_RECEIVED](tokentransactiontype.md#nft\_received)
-* [NFT\_SENT](tokentransactiontype.md#nft\_sent)
-* [PAY\_REQUEST](tokentransactiontype.md#pay\_request)
-* [RECEIVED](tokentransactiontype.md#received)
-* [SENT](tokentransactiontype.md#sent)
-* [SWAP\_TRANSACTION](tokentransactiontype.md#swap\_transaction)
+## Table of contents
 
 ### Enumeration Members
 
-#### EXCHANGE
+- [EXCHANGE](TokenTransactionType.md#exchange)
+- [INVITE\_RECEIVED](TokenTransactionType.md#invite_received)
+- [INVITE\_SENT](TokenTransactionType.md#invite_sent)
+- [NFT\_RECEIVED](TokenTransactionType.md#nft_received)
+- [NFT\_SENT](TokenTransactionType.md#nft_sent)
+- [PAY\_REQUEST](TokenTransactionType.md#pay_request)
+- [RECEIVED](TokenTransactionType.md#received)
+- [SENT](TokenTransactionType.md#sent)
+- [SWAP\_TRANSACTION](TokenTransactionType.md#swap_transaction)
 
-• **EXCHANGE** = `"EXCHANGE"`
+## Enumeration Members
 
-**Defined in**
+### EXCHANGE
 
-[Transactions/types.ts:16](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L16)
+• **EXCHANGE** = ``"EXCHANGE"``
 
-***
+#### Defined in
 
-#### INVITE\_RECEIVED
+[packages/sdk-core/src/Transactions/types.ts:15](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L15)
 
-• **INVITE\_RECEIVED** = `"INVITE_RECEIVED"`
+___
 
-**Defined in**
+### INVITE\_RECEIVED
 
-[Transactions/types.ts:20](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L20)
+• **INVITE\_RECEIVED** = ``"INVITE_RECEIVED"``
 
-***
+#### Defined in
 
-#### INVITE\_SENT
+[packages/sdk-core/src/Transactions/types.ts:19](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L19)
 
-• **INVITE\_SENT** = `"INVITE_SENT"`
+___
 
-**Defined in**
+### INVITE\_SENT
 
-[Transactions/types.ts:19](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L19)
+• **INVITE\_SENT** = ``"INVITE_SENT"``
 
-***
+#### Defined in
 
-#### NFT\_RECEIVED
+[packages/sdk-core/src/Transactions/types.ts:18](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L18)
 
-• **NFT\_RECEIVED** = `"NFT_RECEIVED"`
+___
 
-**Defined in**
+### NFT\_RECEIVED
 
-[Transactions/types.ts:23](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L23)
+• **NFT\_RECEIVED** = ``"NFT_RECEIVED"``
 
-***
+#### Defined in
 
-#### NFT\_SENT
+[packages/sdk-core/src/Transactions/types.ts:22](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L22)
 
-• **NFT\_SENT** = `"NFT_SENT"`
+___
 
-**Defined in**
+### NFT\_SENT
 
-[Transactions/types.ts:22](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L22)
+• **NFT\_SENT** = ``"NFT_SENT"``
 
-***
+#### Defined in
 
-#### PAY\_REQUEST
+[packages/sdk-core/src/Transactions/types.ts:21](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L21)
 
-• **PAY\_REQUEST** = `"PAY_REQUEST"`
+___
 
-**Defined in**
+### PAY\_REQUEST
 
-[Transactions/types.ts:21](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L21)
+• **PAY\_REQUEST** = ``"PAY_REQUEST"``
 
-***
+#### Defined in
 
-#### RECEIVED
+[packages/sdk-core/src/Transactions/types.ts:20](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L20)
 
-• **RECEIVED** = `"RECEIVED"`
+___
 
-**Defined in**
+### RECEIVED
 
-[Transactions/types.ts:17](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L17)
+• **RECEIVED** = ``"RECEIVED"``
 
-***
+#### Defined in
 
-#### SENT
+[packages/sdk-core/src/Transactions/types.ts:16](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L16)
 
-• **SENT** = `"SENT"`
+___
 
-**Defined in**
+### SENT
 
-[Transactions/types.ts:18](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L18)
+• **SENT** = ``"SENT"``
 
-***
+#### Defined in
 
-#### SWAP\_TRANSACTION
+[packages/sdk-core/src/Transactions/types.ts:17](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L17)
 
-• **SWAP\_TRANSACTION** = `"SWAP_TRANSACTION"`
+___
 
-**Defined in**
+### SWAP\_TRANSACTION
 
-[Transactions/types.ts:24](https://github.com/Node-Fi/SDK-Core/blob/1f4f819/src/Transactions/types.ts#L24)
+• **SWAP\_TRANSACTION** = ``"SWAP_TRANSACTION"``
+
+#### Defined in
+
+[packages/sdk-core/src/Transactions/types.ts:23](https://github.com/Node-Fi/sdk/blob/eb73fa4/packages/sdk-core/src/Transactions/types.ts#L23)

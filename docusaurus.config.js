@@ -45,6 +45,24 @@ const config = {
         },
       }),
     ],
+    [
+      "redocusaurus",
+      {
+        // Plugin Options for loading OpenAPI files
+        specs: [
+          {
+            id: "minima",
+            spec: "https://raw.githubusercontent.com/Node-Fi/Specs/main/NodeRouter.yaml",
+            route: "/docs/minima/api",
+          },
+        ],
+        // Theme Options for modifying how redoc renders them
+        theme: {
+          // Change with your site colors
+          primaryColor: "#1890ff",
+        },
+      },
+    ],
   ],
 
   plugins: [
@@ -119,13 +137,13 @@ const config = {
             docId: "intro",
             docsPluginId: "minima",
           },
-          {
-            type: "doc",
-            docId: "about",
-            position: "left",
-            label: "Analytics API",
-            docsPluginId: "data-and-analytics",
-          },
+          // {
+          //   type: "doc",
+          //   docId: "about",
+          //   position: "left",
+          //   label: "Analytics API",
+          //   docsPluginId: "data-and-analytics",
+          // },
           {
             href: "https://github.com/Node-Fi/",
             label: "GitHub",
@@ -140,7 +158,15 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Tutorial",
+                label: "SDK",
+                to: "/sdk/intro",
+              },
+              {
+                label: "API",
+                to: "/sdk/intro",
+              },
+              {
+                label: "Minima",
                 to: "/sdk/intro",
               },
             ],
@@ -149,8 +175,12 @@ const config = {
             title: "Community",
             items: [
               {
+                label: "Website",
+                href: "https://nodefinance.org",
+              },
+              {
                 label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
+                href: "https://discord.gg/EQzVKSNTPM",
               },
               {
                 label: "Twitter",

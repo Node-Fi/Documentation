@@ -1,29 +1,40 @@
 ---
 description: Explore other hooks for Swap
+sidebar_position: 0
 ---
 
 # Hooks
 
 ### **useSwapTypedAmount**
 
-This hook is intended to be directly integrated into frontends, and uses debouncing to limit how often new prices are fetched.
+This hook is intended to be directly integrated into frontends, and uses debouncing to limit how often new quotes are fetched.
 
 It returns the following:
 
-| Param   | Type                                | Required? | Purpose                                                              | Default Value    |
-| ------- | ----------------------------------- | --------- | -------------------------------------------------------------------- | ---------------- |
-| address | string                              | Yes       | Specifies the address of the token to retrieve historical prices for | N / A - REQUIRED |
-| range   | DateRange (1h, 1d, 1w, 1m, 1y, all) | Y         | Specifies the time range to fetch token prices for                   | N / A - REQUIRED |
+```typescript
+type SwapHookReturnShape = {
+  trade?: {
+    details: NodeRoute; // Includes information on the token path, pairs going through, etc
+    output: TokenAmount;
+    minimumOutput: TokenAmount;
+    approvalTarget: string; // Target to approve token transfers for
+    txn: TransactionRequest; // Transaction object to execute the swap
+    priceImpact: number; // Trade impact on price, in bips
+  };
+  fetchDetails: Omit<ReactQueryReturnShape, "data">;
+};
+```
 
 For parameters, it takes the following:
 
-| Param           | Type             | Required? | Description                                                                                                        |
-| --------------- | ---------------- | --------- | ------------------------------------------------------------------------------------------------------------------ |
-| inputAddress    | string           | Y         | Address of input token. If undefined, returned object will be null.                                                |
-| outputAddress   | string           | Y         | Address of output token. If undefined, returned object will be null.                                               |
-| typedAmount     | string \| number | Y         | Decimal-adjusted amount of input token to trade. This would be a value that is entered into a text field by a user |
-| recipient       | string           | N         | Address of recipient of the trade - if undefined will default to current wallet.                                   |
-| debounceDelayMs | number           | N         | Millisecond delay for the internally used debounce hook. Defaults to 500ms                                         |
+| Param         | Type             | Required? | Description                                                                                                        |
+| ------------- | ---------------- | --------- | ------------------------------------------------------------------------------------------------------------------ |
+| inputAddress  | string           | Y         | Address of input token. If undefined, returned object will be null.                                                |
+| outputAddress | string           | Y         | Address of output token. If undefined, returned object will be null.                                               |
+| typedAmount   | string \| number | Y         | Decimal-adjusted amount of input token to trade. This would be a value that is entered into a text field by a user |
+| recipient     | string           | N         | Address of recipient of the trade - if undefined will default to current wallet.                                   |
+| opts          | object           | N         | Optional object to override debounce time or minima request                                                        |
+| queryOpts     | object           | N         | Optional object to override react query config                                                                     |
 
 Example:
 
@@ -66,10 +77,19 @@ This hook can be used to get a live-updated price quote for a given input and ou
 
 It returns the following:
 
-| Param   | Type                                | Required? | Purpose                                                              | Default Value    |
-| ------- | ----------------------------------- | --------- | -------------------------------------------------------------------- | ---------------- |
-| address | string                              | Yes       | Specifies the address of the token to retrieve historical prices for | N / A - REQUIRED |
-| range   | DateRange (1h, 1d, 1w, 1m, 1y, all) | Y         | Specifies the time range to fetch token prices for                   | N / A - REQUIRED |
+```typescript
+type SwapHookReturnShape = {
+  trade?: {
+    details: NodeRoute; // Includes information on the token path, pairs going through, etc
+    output: TokenAmount;
+    minimumOutput: TokenAmount;
+    approvalTarget: string; // Target to approve token transfers for
+    txn: TransactionRequest; // Transaction object to execute the swap
+    priceImpact: number; // Bips of impact of trade on price
+  };
+  fetchDetails: Omit<ReactQueryReturnShape, "data">;
+};
+```
 
 It accepts the following as parameters:
 
@@ -78,6 +98,8 @@ It accepts the following as parameters:
 | input       | TokenAmount | N         | Input token and input amount for the trade. If this is not supplied, the hook will return an empty object |
 | outputToken | Token       | N         | Token to be swapped to. If not supplied, returned object will be empty.                                   |
 | recipient   | string      | N         | Address of recipient of trade result. If not supplied, will default to current active wallet              |
+| opts        | object      | N         | Optional object to override debounce time or minima request                                               |
+| queryOpts   | object      | N         | Optional object to override react query config                                                            |
 
 **useSlippage**
 

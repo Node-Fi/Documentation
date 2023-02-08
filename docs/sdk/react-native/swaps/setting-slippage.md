@@ -10,6 +10,8 @@ Default slippage is 0.1%, and can easily be changed through the hook `useSetSlip
 
 Slippage is represented in bips, so to allow for 100% slippage (DO NOT DO THIS HIGH OF SLIPPAGE), slippage should be set to 10000.
 
+Alternatively, slippage can be included in the `useSwapTypedAmount` hook as an option field in the `query options`.
+
 ### **useSlippage**
 
 This hook exposes both the current slippage, and a function to change the current slippage.

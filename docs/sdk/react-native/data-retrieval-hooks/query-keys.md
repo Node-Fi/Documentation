@@ -10,12 +10,15 @@ queryClient.invalidateQueries([TOKEN_BALANCE_QUERY_KEY]);
 
 The following queries are able to be invalidated this way:
 
-| Query / Hook          | Query Key                                             |
-| --------------------- | ----------------------------------------------------- |
-| useBalances           | `[TOKEN_BALANCE_QUERY]`                               |
-| useBalance            | `[TOKEN_BALANCE_QUERY, tokenAddress.toLowerCase`()`]` |
-| usePricedBalances     | `[TOKEN_BALANCE_QUERY]` `[PRICE_QUERY_KEY]`           |
-| useTokenPrices        | `[PRICE_QUERY_KEY]`                                   |
-| useTokenPrice         | `[PRICE_QUERY_KEY]`                                   |
-| useTransactionHistory | `[TRANSACTION_HISTORY_QUERY_KEY]`                     |
-| usePortfolioHistory   | `[PORTFOLIO_HISTORY_KEY]`                             |
+| Query / Hook                         | Query Key                                               |
+| ------------------------------------ | ------------------------------------------------------- |
+| useBalances                          | `[TOKEN_BALANCE_QUERY]`                                 |
+| useBalance                           | `[TOKEN_BALANCE_QUERY, tokenAddress.toLowerCase`()`]`   |
+| usePricedBalances                    | `[TOKEN_BALANCE_QUERY]` `[PRICE_QUERY_KEY]`             |
+| useTokenPrices                       | `[PRICE_QUERY_KEY]`                                     |
+| useTokenPrice                        | `[PRICE_QUERY_KEY]`                                     |
+| useTransactionHistory                | `[TRANSACTION_HISTORY_QUERY_KEY]`                       |
+| usePortfolioHistory                  | `[PORTFOLIO_HISTORY_KEY]`                               |
+| useDepositablePosition               | `[DepositablePositionQueryKey, {action_type}]`          |
+| useDepositablePositionsList          | `[DepositablePositionQueryKey, "multi", {action_type}]` |
+| useDepositablePositionsOwnedByWallet | `[DepositablePositionQueryKey, "owned", {action_type}]` |
