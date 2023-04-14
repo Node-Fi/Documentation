@@ -23,9 +23,9 @@ Blockchain wallet addresses are complicated and not human-readable. Node's ident
 
 Node treats Celo as an 'appchain' with respect to identity mapping, allowing mappings for generic EVM chains and (in the future) non EVM chains. Celo's identity contract maps strings to addresses, so additional infrastructure needs to be built by Node around the identity contracts in order to support addresses on chains that are not 32 bytes.
 
-Celo's Federated Attestations (ASv2) service obfuscates plain-text identifiers before being used in on-chain attestations, in order to preserve privacy and security. This ensures that a bad actor could not parse attestation events in order to find what phone number belongs to a certain address. Celo's [Oblivious Decentralized Identifier Service (ODIS)](https://docs.celo.org/protocol/identity/odis) helps with this. [Read more about privacy preservation through ODIS here](https://github.com/celo-org/identity/blob/main/asv2/privacy.md)
+Celo's Federated Attestations (ASv2) service obfuscates plain-text identifiers before being used in on-chain attestations, in order to preserve privacy and security. This ensures that a bad actor could not parse attestation events in order to find what phone number belongs to a certain address. Celo's Oblivious Decentralized Identifier Service (ODIS) helps with this. [Read more about privacy preservation through ODIS here](https://github.com/celo-org/SocialConnect/blob/main/privacy.md)
 
-More info on the ASv2 protocol can be [found in their docs](https://github.com/celo-org/identity/blob/main/asv2/protocol.md)
+More info on the ASv2 protocol can be [found in their docs](https://github.com/celo-org/SocialConnect)
 
 ### ASv2 as a Service
 
@@ -35,7 +35,7 @@ Node additionally provides verification as a service, which is included in the S
 
 ### Trusting Other Attestors
 
-As outlined in the [ASv2 docs](https://github.com/celo-org/identity/blob/main/asv2/protocol.md), any address can attest the identity of another address. It is then up to the user (or developer) what attestor they trust. Within Node's identity kit, there is a registry of publicly known (and possibly trusted) attestors. Attestors can add themselves to the registry after sufficient vetting. The registry contains the following information for each vetted attestor:
+As outlined in the [ASv2 docs](https://github.com/celo-org/SocialConnect/blob/main/protocol.md), any address can attest the identity of another address. It is then up to the user (or developer) what attestor they trust. Within Node's identity kit, there is a registry of publicly known (and possibly trusted) attestors. Attestors can add themselves to the registry after sufficient vetting. The registry contains the following information for each vetted attestor:
 
 - name
 - address of the attestor
