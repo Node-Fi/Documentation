@@ -1,6 +1,6 @@
 ---
 description: Wallets are the key to crypto
-sidebar_position: 0
+sidebar_position: 1
 ---
 
 # Create a Wallet

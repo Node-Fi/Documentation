@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # Connect with Web3Auth
 
 [Web3Auth](https://web3auth.io/) is a well-known MPC wallet provider. This tutorial shows how, in a couple lines of code, you can easily use Web3Auth with Node Kit.
@@ -37,6 +41,8 @@ A majority of the work involved in integrating Web3Auth with Node Kit is in the 
 :::note Installing Node Kit
 
 For installation of the Node React Native SDK, see [Getting Started](../getting-started/react-native-sdk-or-or-installation.md)
+
+<iframe src="https://www.youtube.com/embed/N-YEZFMzkl8" frameborder="0" allowfullscreen width="100%" height="500px"></iframe>
 
 :::
 

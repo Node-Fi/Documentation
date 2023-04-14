@@ -1,0 +1,8 @@
+{
+    "label": "Swaps",
+    "position": 5,
+    "link": {
+      "type": "generated-index",
+      "description": "Swaps tokens across all major DEXs using the Node on-chain router protocol."
+    }
+  }
