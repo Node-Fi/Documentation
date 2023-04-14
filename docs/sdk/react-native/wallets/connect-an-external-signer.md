@@ -1,6 +1,6 @@
 ---
 description: Connecting an external signer makes NodeKit composable with the Ethers.js ecosystem
-sidebar_position: 1
+sidebar_position: 3
 ---
 
 # Connect an Ethers.js Signer

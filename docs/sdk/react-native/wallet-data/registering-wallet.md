@@ -1,6 +1,6 @@
 ---
 description: Wallet data can only be served if a wallet is registered within Node's system
-sidebar_position: 0.5
+sidebar_position: 0
 ---
 
 # Wallet Registration

@@ -1,6 +1,6 @@
 ---
 description: Recover a wallet from a mnemonic or private key
-sidebar_position: 0
+sidebar_position: 2
 ---
 
 # Recover a Wallet

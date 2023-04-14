@@ -1,15 +1,23 @@
 ---
-sidebar_position: 0
-description: Node's identity sdk is powered by its `Identity Service,` which in turn relies on the Celo blockchain's identity federated identity mapping system
+sidebar_position: 2
+
+description: Node's Identity SDK is powered by its `Identity Service,` which in turn relies on the Celo blockchain's identity federated identity mapping system
 ---
 
-# About
+# Send tokens to Phone Numbers
 
 :::tip Summary
 
 Node's identity sdk is powered by its `Identity Service,` which in turn relies on the Celo blockchain's Federated Attestations (ASv2) service. Node is the default trusted attestor, and developers can opt-in to trust other attestors.
 
 :::
+
+
+Blockchain wallet addresses are complicated and not human-readable. Node's identity service lets you securely do a 1 way mapping of user phone numbers to wallet addresses, creating a Zelle like experience where users can discover each other using their contact list. 
+
+
+<iframe src="https://www.youtube.com/embed/abSI_C1SYqg" frameborder="0" allowfullscreen width="100%" height="500px"></iframe>
+
 
 ### Celo as an Appchain
 

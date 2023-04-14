@@ -1,5 +1,6 @@
 ---
 description: Various hooks for accessing wallet info
+sidebar_position: 1
 ---
 
 # Hooks

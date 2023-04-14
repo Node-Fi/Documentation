@@ -1,5 +1,6 @@
 ---
 description: Remove wallet details from secure storage
+sidebar_position: 8
 ---
 
 # Delete Local Wallet

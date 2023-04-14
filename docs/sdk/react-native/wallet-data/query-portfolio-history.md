@@ -1,5 +1,6 @@
 ---
 description: A convenient hook for portfolio historical value
+sidebar_position: 2
 ---
 
 # Query Portfolio History
