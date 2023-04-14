@@ -1,6 +1,6 @@
 ---
 description: Install the React Native SDK and get building!
-sidebar_position: 2
+sidebar_position: 2.5
 ---
 
 # Installation - Expo
