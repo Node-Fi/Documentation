@@ -8,15 +8,6 @@ sidebar_position: 0
 
 # Minima DeFi Router
 
-:::warning Documentation Migration In Progress
-
-We are currently in the process of migrating all documentation to this domain. For now, please find full minima documentation at
-[docs.router.nodefinance.org/](https://docs.router.nodefinance.org)
-
-Click [here](./api) for an open api spec for minima
-
-:::
-
 ## What makes Minima unique?
 
 Minima is not your ordinary router. Unlike existing solutions like 0x and 1inch, Minima supports routes through liquidity pool (LP) tokens, Mento, farming contracts, gauges, liquid staking contracts, and more. In this way, you can view Minima as ‘The Everything Router.’ Fully on-chain and non-custodial.&#x20;
