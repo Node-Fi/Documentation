@@ -1,5 +1,5 @@
 ---
-description: >-
+description:
   A novel on-chain router that supports almost every protocol—not just tokens.
   Built by Node Finance.
 

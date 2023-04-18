@@ -30,33 +30,11 @@ const config = {
           path: "docs/sdk",
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
       }),
-    ],
-    [
-      "redocusaurus",
-      {
-        // Plugin Options for loading OpenAPI files
-        specs: [
-          {
-            id: "minima",
-            spec: "https://raw.githubusercontent.com/Node-Fi/Specs/main/NodeRouter.yaml",
-            route: "/docs/minima/api",
-          },
-        ],
-        // Theme Options for modifying how redoc renders them
-        theme: {
-          // Change with your site colors
-          primaryColor: "#1890ff",
-        },
-      },
     ],
   ],
 
@@ -78,6 +56,8 @@ const config = {
         path: "docs/minima",
         routeBasePath: "docs/minima",
         sidebarPath: require.resolve("./sidebars.js"),
+        docLayoutComponent: "@theme/DocPage",
+        docItemComponent: "@theme/ApiItem",
       },
     ],
     [
@@ -90,17 +70,22 @@ const config = {
       },
     ],
     [
-      "@docusaurus/plugin-content-docs",
+      "docusaurus-plugin-openapi-docs",
       {
-        id: "auth",
-        path: "docs/auth",
-        routeBasePath: "docs/auth",
-        sidebarPath: require.resolve("./sidebars.js"),
+        id: "apiDocs",
+        docsPluginId: "classic",
+        config: {
+          minima: {
+            // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
+            specPath: "./swagger/minima.json",
+            outputDir: "docs/minima/swagger", // Output directory for generated .mdx docs,
+            baseUrl: "docs/minima", // Base URL for the API docs,
+          },
+        },
       },
     ],
-    "tailwind-loader",
   ],
-
+  themes: ["docusaurus-theme-openapi-docs"],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -162,7 +147,7 @@ const config = {
               },
               {
                 label: "Minima",
-                to: "/sdk/intro",
+                to: "/minima/intro",
               },
             ],
           },
