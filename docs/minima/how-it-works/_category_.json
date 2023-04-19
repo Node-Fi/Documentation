@@ -1,0 +1,8 @@
+{
+  "label": "How Minima Works",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn how minima works, from the off-chain route-finding mechanism to the on-chain route execution."
+  }
+}

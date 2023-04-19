@@ -1,5 +1,5 @@
 ---
-description: >-
+description:
   A novel on-chain router that supports almost every protocol—not just tokens.
   Built by Node Finance.
 
@@ -7,15 +7,6 @@ sidebar_position: 0
 ---
 
 # Minima DeFi Router
-
-:::warning Documentation Migration In Progress
-
-We are currently in the process of migrating all documentation to this domain. For now, please find full minima documentation at
-[docs.router.nodefinance.org/](https://docs.router.nodefinance.org)
-
-Click [here](./api) for an open api spec for minima
-
-:::
 
 ## What makes Minima unique?
 

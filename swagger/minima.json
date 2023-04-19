@@ -1,0 +1,486 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Minima API",
+    "description": "API for Minima, version 1 (in ea)",
+    "version": "1.0.0"
+  },
+  "components": {
+    "securitySchemes": {
+      "apiKey": { "type": "apiKey", "in": "header", "name": "X-API-KEY" }
+    },
+    "schemas": {}
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "operationId": "Health Check",
+        "responses": {
+          "200": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": { "hello": { "type": "string" } },
+                  "required": ["hello"]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/swap/quote": {
+      "get": {
+        "operationId": "Get Swap Quote",
+        "parameters": [
+          {
+            "schema": { "type": "string", "pattern": "^0x[a-fA-F0-9]{40}$" },
+            "in": "query",
+            "name": "sellToken",
+            "required": true
+          },
+          {
+            "schema": { "type": "string", "pattern": "^0x[a-fA-F0-9]{40}$" },
+            "in": "query",
+            "name": "buyToken",
+            "required": true
+          },
+          {
+            "schema": { "type": "string", "pattern": "^[0-9]+$" },
+            "in": "query",
+            "name": "sellAmount",
+            "required": true
+          },
+          {
+            "schema": { "type": "number", "default": 0.01 },
+            "in": "query",
+            "name": "slippagePercentage",
+            "required": false
+          },
+          {
+            "schema": { "type": "string" },
+            "in": "query",
+            "name": "excludedSources",
+            "required": false
+          },
+          {
+            "schema": { "type": "string" },
+            "in": "query",
+            "name": "includedSources",
+            "required": false
+          },
+          {
+            "schema": { "type": "number", "default": 3 },
+            "in": "query",
+            "name": "maxHops",
+            "required": false
+          },
+          {
+            "schema": { "type": "string", "pattern": "^0x[a-fA-F0-9]{40}$" },
+            "in": "query",
+            "name": "takerAddress",
+            "required": false
+          },
+          {
+            "schema": { "type": "number", "default": 4 },
+            "in": "query",
+            "name": "maxPaths",
+            "required": false
+          },
+          {
+            "schema": { "type": "boolean" },
+            "in": "query",
+            "name": "skipValidation",
+            "required": false
+          },
+          {
+            "schema": { "type": "boolean" },
+            "in": "query",
+            "name": "includeRawParams",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "price": { "type": "number" },
+                    "guarunteedPrice": { "type": "number" },
+                    "validationCheck": {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": ["success", "reverted", "deferred"]
+                        },
+                        "message": { "type": "string" }
+                      },
+                      "required": ["status"]
+                    },
+                    "transaction": {
+                      "type": "object",
+                      "properties": {
+                        "from": { "type": "string" },
+                        "to": { "type": "string" },
+                        "value": { "type": "string" },
+                        "data": { "type": "string" },
+                        "gasLimit": { "type": "string" },
+                        "gasPrice": { "type": "string" },
+                        "nonce": { "type": "string" },
+                        "chainId": { "type": "number" },
+                        "maxFeePerGas": { "type": "string" },
+                        "maxPriorityFeePerGas": { "type": "string" },
+                        "type": { "type": "number" }
+                      },
+                      "required": ["to", "data"]
+                    },
+                    "expectedOutput": { "type": "string" },
+                    "minimumOutput": { "type": "string" },
+                    "allowanceTarget": { "type": "string" },
+                    "estimatedPriceImpact": { "type": "number" },
+                    "rawParams": {
+                      "type": "object",
+                      "properties": {
+                        "path": {
+                          "type": "array",
+                          "items": {
+                            "type": "array",
+                            "items": { "type": "string" }
+                          }
+                        },
+                        "pairs": {
+                          "type": "array",
+                          "items": {
+                            "type": "array",
+                            "items": { "type": "string" }
+                          }
+                        },
+                        "extras": {
+                          "type": "array",
+                          "items": {
+                            "type": "array",
+                            "items": { "type": "string" }
+                          }
+                        },
+                        "divisors": {
+                          "type": "array",
+                          "items": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "toIdx": { "type": "number" },
+                                "divisor": { "type": "number" },
+                                "token": { "type": "string" }
+                              },
+                              "required": ["toIdx", "divisor", "token"]
+                            }
+                          }
+                        },
+                        "inputAmounts": {
+                          "type": "array",
+                          "items": { "type": "string" }
+                        },
+                        "expectedOutputAmount": { "type": "string" },
+                        "minOutputAmount": { "type": "string" },
+                        "to": { "type": "string" },
+                        "deadline": { "type": "string" },
+                        "partner": { "type": "number" },
+                        "sig": { "type": "string" }
+                      },
+                      "required": [
+                        "path",
+                        "pairs",
+                        "extras",
+                        "divisors",
+                        "inputAmounts",
+                        "expectedOutputAmount",
+                        "minOutputAmount",
+                        "to",
+                        "deadline",
+                        "partner",
+                        "sig"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "price",
+                    "guarunteedPrice",
+                    "expectedOutput",
+                    "minimumOutput",
+                    "allowanceTarget",
+                    "estimatedPriceImpact"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "error": {
+                          "type": "string",
+                          "enum": ["No routes found"]
+                        }
+                      },
+                      "required": ["error"]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "error": {
+                          "type": "string",
+                          "enum": ["Unsupported tokens"]
+                        },
+                        "tokens": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "pattern": "^0x[a-fA-F0-9]{40}$"
+                          }
+                        }
+                      },
+                      "required": ["error", "tokens"]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/swap/sources": {
+      "get": {
+        "operationId": "Get Swap Sources",
+        "responses": {
+          "200": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "sources": {
+                      "type": "array",
+                      "items": { "type": "string" }
+                    }
+                  },
+                  "required": ["sources"]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/tokens": {
+      "get": {
+        "operationId": "Get Tokens",
+        "parameters": [
+          {
+            "schema": { "type": "string" },
+            "in": "query",
+            "name": "excludedSources",
+            "required": false
+          },
+          {
+            "schema": { "type": "string" },
+            "in": "query",
+            "name": "includedSources",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "sources": {
+                      "type": "array",
+                      "items": { "type": "string" }
+                    },
+                    "tokens": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "address": { "type": "string" },
+                          "name": { "type": "string" },
+                          "symbol": { "type": "string" },
+                          "decimals": { "type": "number" },
+                          "chainId": { "type": "number" },
+                          "logoURI": { "type": "string" }
+                        },
+                        "required": [
+                          "address",
+                          "name",
+                          "symbol",
+                          "decimals",
+                          "chainId",
+                          "logoURI"
+                        ]
+                      }
+                    }
+                  },
+                  "required": ["sources", "tokens"]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/swap/price": {
+      "get": {
+        "operationId": "Get Swap Price",
+        "parameters": [
+          {
+            "schema": { "type": "string", "pattern": "^0x[a-fA-F0-9]{40}$" },
+            "in": "query",
+            "name": "sellToken",
+            "required": true
+          },
+          {
+            "schema": { "type": "string", "pattern": "^0x[a-fA-F0-9]{40}$" },
+            "in": "query",
+            "name": "buyToken",
+            "required": true
+          },
+          {
+            "schema": { "type": "string", "pattern": "^[0-9]+$" },
+            "in": "query",
+            "name": "sellAmount",
+            "required": true
+          },
+          {
+            "schema": { "type": "number", "default": 0.01 },
+            "in": "query",
+            "name": "slippagePercentage",
+            "required": false
+          },
+          {
+            "schema": { "type": "string" },
+            "in": "query",
+            "name": "excludedSources",
+            "required": false
+          },
+          {
+            "schema": { "type": "string" },
+            "in": "query",
+            "name": "includedSources",
+            "required": false
+          },
+          {
+            "schema": { "type": "number", "default": 3 },
+            "in": "query",
+            "name": "maxHops",
+            "required": false
+          },
+          {
+            "schema": { "type": "string", "pattern": "^0x[a-fA-F0-9]{40}$" },
+            "in": "query",
+            "name": "takerAddress",
+            "required": false
+          },
+          {
+            "schema": { "type": "number", "default": 4 },
+            "in": "query",
+            "name": "maxPaths",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "price": { "type": "number" },
+                    "guarunteedPrice": { "type": "number" },
+                    "expectedOutput": { "type": "string" },
+                    "minimumOutput": { "type": "string" },
+                    "estimatedPriceImpact": { "type": "number" }
+                  },
+                  "required": [
+                    "price",
+                    "guarunteedPrice",
+                    "expectedOutput",
+                    "minimumOutput",
+                    "estimatedPriceImpact"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Default Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "error": {
+                          "type": "string",
+                          "enum": ["No routes found"]
+                        }
+                      },
+                      "required": ["error"]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "error": {
+                          "type": "string",
+                          "enum": ["Unsupported tokens"]
+                        },
+                        "tokens": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "pattern": "^0x[a-fA-F0-9]{40}$"
+                          }
+                        }
+                      },
+                      "required": ["error", "tokens"]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "https://minima.nodefinance.org/{chainId}",
+      "variables": { "chainId": { "default": "42220" } }
+    }
+  ],
+  "security": [{ "apiKey": [] }],
+  "externalDocs": {
+    "url": "https://docs.nodefinance.org",
+    "description": "Find more info here"
+  }
+}
