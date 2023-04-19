@@ -18,7 +18,7 @@ To get your API keys, head over to [nodefinance.org](https://nodefinance.org) an
 
 Chain ID is defined in the base path, like so:
 
-`https://minima.nodefinance.org/{chain}`
+`https://minima.nodefinance.org/{chain}/v1/*`
 
 Here, `chain` can be either the base 10 chain id or the name of the chain.
 
