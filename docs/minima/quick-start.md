@@ -22,12 +22,15 @@ Chain ID is defined in the base path, like so:
 
 Here, `chain` can be either the base 10 chain id or the name of the chain.
 
-| Chain | Name      |
-| ----- | --------- |
-| 4220  | Celo      |
-| 137   | Polygon   |
-| 4337  | Avalanche |
-| 1     | Ethereum  |
+| Chain | Name      | Status      |
+| ----- | --------- | ----------- |
+| 4220  | Celo      | LIVE        |
+| 137   | Polygon   | LIVE        |
+| 4337  | Avalanche | Coming Soon |
+| 1     | Ethereum  | Coming Soon |
+| 10    | Optimism  | Coming Soon |
+| 42161 | Arbitrum  | Coming Soon |
+| 56    | BSC       | Coming Soon |
 
 ## Include API Keys
 
