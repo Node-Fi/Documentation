@@ -27,6 +27,7 @@ The `/v1/swap/quote` route provides a detailed quote for swapping tokens using M
 | maxPaths           | number  | The maximum number of paths to be used in the routing. Default is 4.                          | No       |
 | skipValidation     | boolean | Whether to skip validation for the swap quote.                                                | No       |
 | includeRawParams   | boolean | Whether to include raw parameters in the response.                                            | No       |
+| feeCurrency        | string  | Address of gas token (supported on Celo only).                                                | No       |
 
 ### Output
 
@@ -44,10 +45,12 @@ The `/v1/swap/quote` route provides a detailed quote for swapping tokens using M
 
 ### Errors
 
-| HTTP Status Code | Error              | Description                                                                                                                                  |
-| ---------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| 400              | No routes found    | No suitable routes were found for the requested token swap.                                                                                  |
-| 400              | Unsupported tokens | One or more tokens in the requested swap are not supported by the API. The `tokens` field will contain the address of the unsupported tokens |
+| HTTP Status Code | Error                      | Description                                                                                                                                  |
+| ---------------- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| 400              | No routes found            | No suitable routes were found for the requested token swap.                                                                                  |
+| 400              | Unsupported tokens         | One or more tokens in the requested swap are not supported by the API. The `tokens` field will contain the address of the unsupported tokens |
+| 400              | Fee Currency Not Supported | The given chain does not support alternate fee currencies                                                                                    |
+| 400              | Unsupported fee currency   | The provided `feeCurrency` is not valid for the given network                                                                                |
 
 ## Transaction Validation
 
@@ -98,3 +101,13 @@ By default, the Minima API will format the transaction and include it in the res
 For the sake of transparency, callers are able to request the raw transaction parameters in order to build the transaction themselves.
 
 This can be achieved by setting `includeRawParams=true` in your query.
+
+## Alternate Fee Currencies
+
+When using Minima on chains that support alternate fee currencies, the `feeCurrency` query parameter can be included in order to make sure Minima provides the most accurate transaction request.
+
+Currently only Celo supports alternate fee currencies.
+
+If `feeCurrency` is provided for a chain that does not support alternate gas tokens, then the server will respond with a 400 error code.
+
+If a feeCurrency is provided for a chain that supports alternate gas tokens, but the address supplied is not a valid gas token, the server will respond with a 400 error code, the error message "Unsupported fee currency", and an array of valid gas token addresses.

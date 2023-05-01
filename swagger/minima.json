@@ -22,8 +22,8 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": { "hello": { "type": "string" } },
-                  "required": ["hello"]
+                  "properties": { "status": { "type": "string" } },
+                  "required": ["status"]
                 }
               }
             }
@@ -34,6 +34,7 @@
     "/v1/swap/quote": {
       "get": {
         "operationId": "Get Swap Quote",
+
         "parameters": [
           {
             "schema": { "type": "string", "pattern": "^0x[a-fA-F0-9]{40}$" },
@@ -100,6 +101,12 @@
             "in": "query",
             "name": "includeRawParams",
             "required": false
+          },
+          {
+            "schema": { "type": "string", "pattern": "^0x[a-fA-F0-9]{40}$" },
+            "in": "query",
+            "name": "feeCurrency",
+            "required": false
           }
         ],
         "responses": {
@@ -136,6 +143,7 @@
                         "chainId": { "type": "number" },
                         "maxFeePerGas": { "type": "string" },
                         "maxPriorityFeePerGas": { "type": "string" },
+                        "feeCurrency": { "type": "string" },
                         "type": { "type": "number" }
                       },
                       "required": ["to", "data"]
@@ -253,6 +261,34 @@
                         }
                       },
                       "required": ["error", "tokens"]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "error": {
+                          "type": "string",
+                          "enum": ["Fee currency not supported on this chain"]
+                        }
+                      },
+                      "required": ["error"]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "error": {
+                          "type": "string",
+                          "enum": ["Unsupported fee currency"]
+                        },
+                        "message": { "type": "string" },
+                        "supportedFeeCurrencies": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "pattern": "^0x[a-fA-F0-9]{40}$"
+                          }
+                        }
+                      },
+                      "required": ["error", "message", "supportedFeeCurrencies"]
                     }
                   ]
                 }
@@ -265,6 +301,7 @@
     "/v1/swap/sources": {
       "get": {
         "operationId": "Get Swap Sources",
+
         "responses": {
           "200": {
             "description": "Default Response",
@@ -288,7 +325,8 @@
     },
     "/v1/tokens": {
       "get": {
-        "operationId": "Get Tokens",
+        "operationId": "Get Supported Tokens",
+
         "parameters": [
           {
             "schema": { "type": "string" },
@@ -349,6 +387,7 @@
     "/v1/swap/price": {
       "get": {
         "operationId": "Get Swap Price",
+
         "parameters": [
           {
             "schema": { "type": "string", "pattern": "^0x[a-fA-F0-9]{40}$" },
