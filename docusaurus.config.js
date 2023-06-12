@@ -52,17 +52,6 @@ const config = {
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: "minima",
-        path: "docs/minima",
-        routeBasePath: "docs/minima",
-        sidebarPath: require.resolve("./sidebars.js"),
-        docLayoutComponent: "@theme/DocPage",
-        docItemComponent: "@theme/ApiItem",
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
         id: "data-and-analytics",
         path: "docs/data-and-analytics-api",
         routeBasePath: "docs/data-and-analytics-api",
