@@ -58,21 +58,6 @@ const config = {
         sidebarPath: require.resolve("./sidebars.js"),
       },
     ],
-    [
-      "docusaurus-plugin-openapi-docs",
-      {
-        id: "apiDocs",
-        docsPluginId: "classic",
-        config: {
-          minima: {
-            // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
-            specPath: "./swagger/minima.json",
-            outputDir: "docs/minima/swagger", // Output directory for generated .mdx docs,
-            baseUrl: "docs/minima", // Base URL for the API docs,
-          },
-        },
-      },
-    ],
   ],
   themes: ["docusaurus-theme-openapi-docs"],
   themeConfig:
