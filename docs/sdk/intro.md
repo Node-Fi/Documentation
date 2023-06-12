@@ -38,10 +38,6 @@ A set of endpoints to query state and historical data from EVMs. Pre-built queri
 
 An engine for realtime push notifications powered by event subscriptions via web-hooks. Use pre-built templates for wallets (e.g. notify when tokens received), tokens (e.g. notify when token X goes up by Y%), and DeFi protocols (e.g. notify if APR falls below Z%), or mix and match to create your own bespoke notification (e.g. notify if wallet A withdraws money from protocol B).
 
-**💱 DeFi Router**
-
-Offer in-app access to any DeFi primitive (swap, lend, stake, pool, farm, etc) with just a few lines of code. Powered by our on-chain Minima router, the DeFiKit makes it easy for any user to leverage access DeFi.
-
 **🔍 Compliance Dashboard**
 
 A set of tools for enforcing compliance. Examples include the ability to screen for OFAC sanctioned addresses and assemble a blacklist of addresses, which prevents our full nodes from processing any of their transactions (and logs IP + device info).

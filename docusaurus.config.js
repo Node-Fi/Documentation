@@ -52,36 +52,10 @@ const config = {
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: "minima",
-        path: "docs/minima",
-        routeBasePath: "docs/minima",
-        sidebarPath: require.resolve("./sidebars.js"),
-        docLayoutComponent: "@theme/DocPage",
-        docItemComponent: "@theme/ApiItem",
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
         id: "data-and-analytics",
         path: "docs/data-and-analytics-api",
         routeBasePath: "docs/data-and-analytics-api",
         sidebarPath: require.resolve("./sidebars.js"),
-      },
-    ],
-    [
-      "docusaurus-plugin-openapi-docs",
-      {
-        id: "apiDocs",
-        docsPluginId: "classic",
-        config: {
-          minima: {
-            // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
-            specPath: "./swagger/minima.json",
-            outputDir: "docs/minima/swagger", // Output directory for generated .mdx docs,
-            baseUrl: "docs/minima", // Base URL for the API docs,
-          },
-        },
       },
     ],
   ],
@@ -110,20 +84,6 @@ const config = {
             label: "Application API",
             docsPluginId: "application-api",
           },
-          {
-            type: "doc",
-            label: "Minima",
-            position: "left",
-            docId: "intro",
-            docsPluginId: "minima",
-          },
-          // {
-          //   type: "doc",
-          //   docId: "about",
-          //   position: "left",
-          //   label: "Analytics API",
-          //   docsPluginId: "data-and-analytics",
-          // },
           {
             href: "https://github.com/Node-Fi/",
             label: "GitHub",
